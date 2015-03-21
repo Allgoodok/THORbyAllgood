@@ -13,29 +13,29 @@ import java.io.IOException;
  */
 public class THORParser {
 
-    String url = "http://www.prime-speed.ru/proxy/free-proxy-list/all-working-proxies.php/";
-    String html = null;
-    Document doc = null;
+    final String url = "http://www.prime-speed.ru/proxy/free-proxy-list/all-working-proxies.php/";
+    String html;
+    Document doc;
 
-    public Elements getProxyList() {
+    public String getProxyList() {
         try {
             html = Jsoup.connect(url).get().toString();
             doc = Jsoup.parse(html);
+            String tempList = null;
 
 
             Elements pres = doc.select("pre");
 
             for (Element pre : pres) {
-                return pre.getAllElements();
+                tempList = pre.getAllElements().text();
 
             }
-            return null;
-        } catch (IOException e){
+            return tempList.substring((tempList.indexOf(".")-1), tempList.length());
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return null;
     }
-
 }
 
 

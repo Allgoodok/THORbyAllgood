@@ -36,12 +36,7 @@ public class THORParser {
         return null;
     }
 
-
-        public static void main(String[] args) {
-            THORParser example = new THORParser();
-            System.out.println(example.getProxyList());
-        }
-    }
+}
 
 
 

@@ -1,17 +1,19 @@
 package proxydatabase;
-import java.sql.DriverManager;
-import java.sql.Connection;
-import java.sql.SQLException;
+import java.sql.*;
+
 /**
  * Created by Vlad on 21.03.2015.
  */
 public class JDBCConnection {
-    private String url = "jdbc:postgresql://localhost:5432/ProxyList";
-    private String username = "postgres";
-    private String password = "Terminator133";
+    private static final String url = "jdbc:postgresql://localhost:5432/ProxyList";
+    public static final  String username = "postgres";
+    public static final  String password = "Terminator133";
     protected String driverJAR = "org.postgresql.Driver";
+    public Connection connection = null;
+    public Statement statement = null;
+    public PreparedStatement preparedStatement = null;
 
-    public void performConnection(){
+    public JDBCConnection(){
         System.out.println("-------- PostgreSQL "
                 + "JDBC Connection Testing ------------");
 
@@ -30,11 +32,12 @@ public class JDBCConnection {
 
         System.out.println("PostgreSQL JDBC Driver Registered!");
 
-        Connection connection = null;
 
         try {
 
             connection = DriverManager.getConnection(url, username, password);
+            statement = connection.createStatement();
+
 
         } catch (SQLException e) {
 
@@ -50,5 +53,6 @@ public class JDBCConnection {
             System.out.println("Failed to make connection!");
         }
     }
+
 }
 

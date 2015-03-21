@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="PostgreSQL - ProxyList@localhost" uuid="d3962b95-db17-4d1e-a5d3-9559603a3d4c">
-      <secret-storage>memory</secret-storage>
-      <first-sync>true</first-sync>
+    <data-source name="PostgreSQL - postgres@localhost" uuid="0c1a2da4-f4ef-4a6c-ab5a-f633f834ec7c">
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <schema-pattern>ProxyList.pg_catalog ProxyList.public</schema-pattern>
+      <default-schemas>ProxyList.pg_catalog ProxyList.public</default-schemas>
     </data-source>
   </component>
 </project>

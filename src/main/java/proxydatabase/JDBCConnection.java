@@ -10,8 +10,6 @@ public class JDBCConnection {
     public static final  String password = "Terminator133";
     protected String driverJAR = "org.postgresql.Driver";
     public Connection connection = null;
-    public Statement statement = null;
-    public PreparedStatement preparedStatement = null;
 
     public JDBCConnection(){
         System.out.println("-------- PostgreSQL "
@@ -36,7 +34,6 @@ public class JDBCConnection {
         try {
 
             connection = DriverManager.getConnection(url, username, password);
-            statement = connection.createStatement();
 
 
         } catch (SQLException e) {

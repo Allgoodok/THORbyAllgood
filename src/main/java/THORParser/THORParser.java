@@ -27,10 +27,10 @@ public class THORParser {
             Elements pres = doc.select("pre");
 
             for (Element pre : pres) {
-                tempList = pre.getAllElements().text();
+                return pre.getAllElements().text().substring((tempList.indexOf(".")-1), tempList.length());
 
             }
-            return tempList.substring((tempList.indexOf(".")-1), tempList.length());
+
         } catch (IOException e) {
             e.printStackTrace();
         }

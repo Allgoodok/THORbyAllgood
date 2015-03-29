@@ -1573,7 +1573,7 @@
       <column name="ipaddress" sqlType="bpchar" precision="25" scale="0" nullable="true" jdbcType="1"/>
       <column name="usability" sqlType="bool" precision="1" scale="0" nullable="true" jdbcType="-7"/>
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgncHJveHlsaXN0X2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
-      <column name="port" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="port" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <primary-key name="proxylist_pkey" columns="id"/>
     </table>
     <procedure name="RI_FKey_cascade_del" schema="pg_catalog" catalog="ProxyList" type="2" remarks="cmVmZXJlbnRpYWwgaW50ZWdyaXR5IE9OIERFTEVURSBDQVNDQURF">

@@ -6,6 +6,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
+import java.net.SocketTimeoutException;
 
 
 /**
@@ -27,13 +28,17 @@ public class THORParser {
             Elements pres = doc.select("pre");
 
             for (Element pre : pres) {
-                return pre.getAllElements().text().substring((tempList.indexOf(".")-1), tempList.length());
+                tempList = pre.getAllElements().text();
 
             }
 
-        } catch (IOException e) {
+            return tempList.substring((tempList.indexOf(".")-1), tempList.length());
+
+        }
+        catch (IOException e) {
             e.printStackTrace();
         }
+
         return null;
     }
 

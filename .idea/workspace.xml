@@ -64,7 +64,7 @@
       <file leaf-file-name="THORParser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/THORParser/THORParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="766" max-vertical-offset="1122">
+            <state vertical-scroll-proportion="0.0" vertical-offset="704" max-vertical-offset="1122">
               <caret line="54" column="23" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -109,26 +109,26 @@
       <file leaf-file-name="DBFill.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/proxydatabase/DBFill.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="861" max-vertical-offset="1139">
-              <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="721" max-vertical-offset="1139">
+              <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
               <folding>
-                <marker date="1427868934900" expanded="true" signature="287:348" placeholder="INSERT INTO ..." />
-                <marker date="1427868934900" expanded="true" signature="404:431" placeholder="INSERT INTO ..." />
-                <marker date="1427868934900" expanded="true" signature="404:433" placeholder="INSERT INTO ..." />
-                <marker date="1427868934900" expanded="true" signature="404:441" placeholder="INSERT INTO ..." />
+                <marker date="1427883450922" expanded="true" signature="287:348" placeholder="INSERT INTO ..." />
+                <marker date="1427883450922" expanded="true" signature="404:431" placeholder="INSERT INTO ..." />
+                <marker date="1427883450922" expanded="true" signature="404:433" placeholder="INSERT INTO ..." />
+                <marker date="1427883450922" expanded="true" signature="404:441" placeholder="INSERT INTO ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PROXYIpAddress.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PROXYIpAddress.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/THORParser/PROXYIpAddress.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1112" max-vertical-offset="1530">
-              <caret line="99" column="1" selection-start-line="99" selection-start-column="1" selection-end-line="99" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.74876845" vertical-offset="852" max-vertical-offset="1598">
+              <caret line="84" column="33" selection-start-line="84" selection-start-column="33" selection-end-line="84" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1427869421567" expanded="true" signature="1928:1951" placeholder="select * fro..proxylist..." />
+                <marker date="1427885999465" expanded="true" signature="2100:2123" placeholder="select * fro..proxylist..." />
               </folding>
             </state>
           </provider>
@@ -164,7 +164,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProxyList.public.proxylist" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProxyList.public.proxylist" pinned="false" current-in-tab="false">
         <entry file="dbDummy://dbtable:/cef1eaf/0c1a2da4-f4ef-4a6c-ab5a-f633f834ec7c/ProxyList.public.proxylist">
           <provider editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
@@ -192,9 +192,9 @@
         <option value="dbtable:/cef1eaf/0c1a2da4-f4ef-4a6c-ab5a-f633f834ec7c/ProxyList.public.proxylist" />
         <option value="$PROJECT_DIR$/src/main/java/proxyinternetconnection/CHECKproxyefficiency.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/THORParser/THORParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/proxydatabase/DBFill.java" />
         <option value="$PROJECT_DIR$/src/main/java/THORParser/PROXYIpAddress.java" />
-        <option value="$PROJECT_DIR$/src/main/java/THORParser/THORParser.java" />
       </list>
     </option>
   </component>
@@ -397,7 +397,7 @@
     <property name="options.lastSelected" value="database.main" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="FullScreen" value="false" />
@@ -818,12 +818,12 @@
       <workItem from="1426885097245" duration="59511000" />
       <workItem from="1427605791864" duration="220000" />
       <workItem from="1427606043278" duration="3199000" />
-      <workItem from="1427821628290" duration="14629000" />
+      <workItem from="1427821628290" duration="19017000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94540000" />
+    <option name="totallyTimeSpent" value="98928000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -837,11 +837,11 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27716535" sideWeight="0.30673498" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.296063" sideWeight="0.30673498" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27716535" sideWeight="0.693265" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.296063" sideWeight="0.693265" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25256222" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -901,10 +901,10 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="411" max-vertical-offset="1343">
           <caret line="72" column="1" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
           <folding>
-            <marker date="1427868934900" expanded="true" signature="287:348" placeholder="INSERT INTO ..." />
-            <marker date="1427868934900" expanded="true" signature="404:431" placeholder="INSERT INTO ..." />
-            <marker date="1427868934900" expanded="true" signature="404:433" placeholder="INSERT INTO ..." />
-            <marker date="1427868934900" expanded="true" signature="404:441" placeholder="INSERT INTO ..." />
+            <marker date="1427883450922" expanded="true" signature="287:348" placeholder="INSERT INTO ..." />
+            <marker date="1427883450922" expanded="true" signature="404:431" placeholder="INSERT INTO ..." />
+            <marker date="1427883450922" expanded="true" signature="404:433" placeholder="INSERT INTO ..." />
+            <marker date="1427883450922" expanded="true" signature="404:441" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -1003,7 +1003,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1427869421567" expanded="true" signature="1928:1951" placeholder="select * fro..proxylist..." />
+            <marker date="1427885999465" expanded="true" signature="2100:2123" placeholder="select * fro..proxylist..." />
           </folding>
         </state>
       </provider>
@@ -1394,45 +1394,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/net/URLConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.62068963" vertical-offset="5524" max-vertical-offset="29002">
-          <caret line="363" column="25" selection-start-line="363" selection-start-column="25" selection-end-line="363" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/proxydatabase/JDBCConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="430" max-vertical-offset="1037">
-          <caret line="53" column="1" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/THORParser/THORParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="766" max-vertical-offset="1122">
-          <caret line="54" column="23" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/proxydatabase/DBFill.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="861" max-vertical-offset="1139">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding>
-            <marker date="1427868934900" expanded="true" signature="287:348" placeholder="INSERT INTO ..." />
-            <marker date="1427868934900" expanded="true" signature="404:431" placeholder="INSERT INTO ..." />
-            <marker date="1427868934900" expanded="true" signature="404:433" placeholder="INSERT INTO ..." />
-            <marker date="1427868934900" expanded="true" signature="404:441" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://db-console:/cef1eaf/0c1a2da4-f4ef-4a6c-ab5a-f633f834ec7c/">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="356">
@@ -1457,14 +1418,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/THORParser/PROXYIpAddress.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/THORParser/THORParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1112" max-vertical-offset="1530">
-          <caret line="99" column="1" selection-start-line="99" selection-start-column="1" selection-end-line="99" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="766" max-vertical-offset="1122">
+          <caret line="54" column="23" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1427869421567" expanded="true" signature="1928:1951" placeholder="select * fro..proxylist..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/proxydatabase/DBFill.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="721" max-vertical-offset="1139">
+          <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
+          <folding>
+            <marker date="1427883450922" expanded="true" signature="287:348" placeholder="INSERT INTO ..." />
+            <marker date="1427883450922" expanded="true" signature="404:431" placeholder="INSERT INTO ..." />
+            <marker date="1427883450922" expanded="true" signature="404:433" placeholder="INSERT INTO ..." />
+            <marker date="1427883450922" expanded="true" signature="404:441" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/proxydatabase/JDBCConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="430" max-vertical-offset="1037">
+          <caret line="53" column="1" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1478,6 +1459,25 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/net/URLConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.62068963" vertical-offset="5524" max-vertical-offset="29002">
+          <caret line="363" column="25" selection-start-line="363" selection-start-column="25" selection-end-line="363" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/THORParser/PROXYIpAddress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.74876845" vertical-offset="852" max-vertical-offset="1598">
+          <caret line="84" column="33" selection-start-line="84" selection-start-column="33" selection-end-line="84" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1427885999465" expanded="true" signature="2100:2123" placeholder="select * fro..proxylist..." />
+          </folding>
         </state>
       </provider>
     </entry>

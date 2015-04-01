@@ -4,6 +4,8 @@ import proxydatabase.JDBCConnection;
 
 import javax.xml.ws.http.HTTPBinding;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.*;
 import java.sql.*;
 import java.sql.SQLException;
@@ -57,22 +59,22 @@ public class PROXYIpAddress {
                 int TIMEOUT = 5000;
 
                 Proxy proxy = new Proxy(Proxy.Type.HTTP, addr);
-                URL url = new URL("https://www.google.com/");
+                URL url = new URL("http://www.example.com/");
                 URLConnection conn = url.openConnection(proxy);
                 conn.setConnectTimeout(TIMEOUT);
-                conn.connect();
-                System.out.println("Connection established.");
+                conn.setReadTimeout(5000);
+                InputStream inputStream = conn.getInputStream();
+                System.out.printf("Connection established using proxy ");
 //              return true;
 
 
         } catch (SocketTimeoutException e){
-            e.printStackTrace();
-            System.out.println("Connection failed");
+            System.out.printf("Connection failed using proxy ");
 //            return false;
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.printf("Connection failed due to 403 error using proxy ");
         }
 
 //        return false;
@@ -88,11 +90,13 @@ public class PROXYIpAddress {
 
         PROXYIpAddress proxyIpAddress = new PROXYIpAddress();
 
-        while (resultSet.next()) {
 
-            SocketAddress addr = new InetSocketAddress(resultSet.getString(1), resultSet.getInt(4));
+       while (resultSet.next()) {
 
-            proxyIpAddress.checkIpEfficiency(addr);
+            SocketAddress socketAddress = new InetSocketAddress(resultSet.getString(1), resultSet.getInt(4));
+
+            proxyIpAddress.checkIpEfficiency(socketAddress);
+            System.out.println(resultSet.getString(1));
 
         }
 

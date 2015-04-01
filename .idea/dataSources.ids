@@ -1570,7 +1570,7 @@
       <column name="definition" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
     </table>
     <table name="proxylist" schema="public" catalog="ProxyList" type="TABLE">
-      <column name="ipaddress" sqlType="bpchar" precision="25" scale="0" nullable="true" jdbcType="1"/>
+      <column name="ipaddress" sqlType="varchar" precision="25" scale="0" nullable="true" jdbcType="12"/>
       <column name="usability" sqlType="bool" precision="1" scale="0" nullable="true" jdbcType="-7"/>
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgncHJveHlsaXN0X2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
       <column name="port" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>

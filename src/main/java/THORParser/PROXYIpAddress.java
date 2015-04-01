@@ -54,7 +54,7 @@ public class PROXYIpAddress {
         this.port = port;
     }
 
-    public void checkIpEfficiency(SocketAddress addr) {
+    public boolean checkIpEfficiency(SocketAddress addr) {
         try {
                 int TIMEOUT = 5000;
 
@@ -65,24 +65,27 @@ public class PROXYIpAddress {
                 conn.setReadTimeout(5000);
                 InputStream inputStream = conn.getInputStream();
                 System.out.printf("Connection established using proxy ");
-//              return true;
+                return true;
 
 
         } catch (SocketTimeoutException e){
             System.out.printf("Connection failed using proxy ");
-//            return false;
+            return false;
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
             System.out.printf("Connection failed due to 403 error using proxy ");
+            return false;
         }
 
-//        return false;
+            return false;
     }
 
-    public static void main(String[] args) throws SQLException {
+    public void checkForUsability() throws SQLException {
 
+        String UPDATE_COLUMN_2 = "UPDATE proxylist SET usability = ? WHERE ipaddress = ?";
         JDBCConnection jdbcConnection = new JDBCConnection();
+        PreparedStatement preparedStatement = jdbcConnection.connection.prepareStatement(UPDATE_COLUMN_2);
         String query = "select * from proxylist";
 
         Statement statement = jdbcConnection.connection.createStatement();
@@ -90,13 +93,17 @@ public class PROXYIpAddress {
 
         PROXYIpAddress proxyIpAddress = new PROXYIpAddress();
 
+        String tempIPAddress;
+
 
        while (resultSet.next()) {
 
             SocketAddress socketAddress = new InetSocketAddress(resultSet.getString(1), resultSet.getInt(4));
-
-            proxyIpAddress.checkIpEfficiency(socketAddress);
+            tempIPAddress = resultSet.getString(1);
+            preparedStatement.setBoolean(1,proxyIpAddress.checkIpEfficiency(socketAddress));
             System.out.println(resultSet.getString(1));
+            preparedStatement.setString(2,tempIPAddress);
+            preparedStatement.executeUpdate();
 
         }
 

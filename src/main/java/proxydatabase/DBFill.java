@@ -14,6 +14,7 @@ import java.sql.SQLException;
 public class DBFill {
     private static final String INSERT_NEW_COLUMN12 ="INSERT INTO proxylist(ipaddress,usability,port) VALUES(?,?,?)";
     private static final String INSERT_NEW_COLUMN3 ="INSERT INTO proxylist(port) VALUES(?)";
+    private static final String DELETE = "DELETE FROM proxylist";
     public JDBCConnection jdbcConnection = new JDBCConnection();
     public THORParser thorParser = new THORParser();
     public String toPutInDB= null;
@@ -21,12 +22,15 @@ public class DBFill {
     public PreparedStatement preparedStatement1 = null;
     public PreparedStatement preparedStatement2 = null;
 
+
     public DBFill() {}
 
     public void fillingDB() {
         try {
+            this.statement = jdbcConnection.connection.createStatement();
             this.preparedStatement1 = jdbcConnection.connection.prepareStatement(INSERT_NEW_COLUMN12);
             this.preparedStatement2 = jdbcConnection.connection.prepareStatement(INSERT_NEW_COLUMN3);
+            statement.execute(DELETE);
             toPutInDB = thorParser.getProxyList();
             int N = 32;
             int column = 58;

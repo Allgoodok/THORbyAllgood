@@ -28,31 +28,24 @@ public class DBFill {
             this.preparedStatement1 = jdbcConnection.connection.prepareStatement(INSERT_NEW_COLUMN12);
             this.preparedStatement2 = jdbcConnection.connection.prepareStatement(INSERT_NEW_COLUMN3);
             toPutInDB = thorParser.getProxyList();
-            int i = 0;
-            int N = 10;
+            int N = 32;
             int column = 58;
             int tempInt  = 0;
             String tempStr = null;
 
-            while(i < toPutInDB.length()) {
 
-                if ((int)toPutInDB.charAt(i) == N) {
-                    tempStr = this.toPutInDB.substring(tempInt,i);
-                    String[] split = tempStr.split(":");
-                    for(int j = 0; j < split.length; j+=2) {
-                        this.preparedStatement1.setString(1,split[j]);
-                        this.preparedStatement1.setBoolean(2, false);
-                        this.preparedStatement1.setInt(3,Integer.parseInt(split[j + 1]));
+            String[] splitTable = toPutInDB.split(" ");
+            for(int i = 0; i < splitTable.length; i++ ) {
+                String[] split = splitTable[i].split(":");
+                for (int j = 0; j < split.length; j += 2) {
+                    this.preparedStatement1.setString(1, split[j]);
+                    this.preparedStatement1.setBoolean(2, false);
+                    this.preparedStatement1.setInt(3, Integer.parseInt(split[j + 1]));
 
-                        this.preparedStatement1.execute();
-                    }
+                    this.preparedStatement1.execute();
 
-                    tempInt = i;
-                    i++;
-
-                }else{
-                    i++;
                 }
+
             }
 
         } catch (SQLException e) {

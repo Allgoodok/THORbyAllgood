@@ -2,6 +2,7 @@ package THORParser;
 
 import proxydatabase.JDBCConnection;
 
+import javax.xml.ws.http.HTTPBinding;
 import java.io.IOException;
 import java.net.*;
 import java.sql.*;
@@ -51,33 +52,49 @@ public class PROXYIpAddress {
         this.port = port;
     }
 
-    public boolean checkIpEfficiency() {
-        JDBCConnection jdbcConnection = new JDBCConnection();
-        String query = "select * from proxylist";
+    public void checkIpEfficiency(SocketAddress addr) {
         try {
+                int TIMEOUT = 5000;
 
-            Statement statement = jdbcConnection.connection.createStatement();
-            ResultSet resultSet = statement.executeQuery(query);
-
-            while (resultSet.next()) {
-
-                SocketAddress addr = new InetSocketAddress(resultSet.getString(1), resultSet.getInt(4));
                 Proxy proxy = new Proxy(Proxy.Type.HTTP, addr);
-
-                URL url = new URL("http://java.example.org/");
+                URL url = new URL("https://www.google.com/");
                 URLConnection conn = url.openConnection(proxy);
+                conn.setConnectTimeout(TIMEOUT);
+                conn.connect();
+                System.out.println("Connection established.");
+//              return true;
 
 
-
-
-            }
-
-        } catch (SQLException e) {
+        } catch (SocketTimeoutException e){
             e.printStackTrace();
+            System.out.println("Connection failed");
+//            return false;
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+//        return false;
+    }
+
+    public static void main(String[] args) throws SQLException {
+
+        JDBCConnection jdbcConnection = new JDBCConnection();
+        String query = "select * from proxylist";
+
+        Statement statement = jdbcConnection.connection.createStatement();
+        ResultSet resultSet = statement.executeQuery(query);
+
+        PROXYIpAddress proxyIpAddress = new PROXYIpAddress();
+
+        while (resultSet.next()) {
+
+            SocketAddress addr = new InetSocketAddress(resultSet.getString(1), resultSet.getInt(4));
+
+            proxyIpAddress.checkIpEfficiency(addr);
+
+        }
+
     }
 }

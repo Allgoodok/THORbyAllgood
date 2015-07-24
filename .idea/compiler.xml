@@ -26,5 +26,8 @@
         <module name="THORbyAllgood" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="THORbyAllgood" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>

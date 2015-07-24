@@ -2,13 +2,13 @@ package THORParser;
 
 import proxydatabase.JDBCConnection;
 
-import javax.xml.ws.http.HTTPBinding;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.net.*;
-import java.sql.*;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  * Created by Vlad on 21.03.2015.
@@ -65,7 +65,7 @@ public class PROXYIpAddress {
                 conn.setReadTimeout(5000);
                 InputStream inputStream = conn.getInputStream();
                 System.out.printf("Connection established using proxy ");
-                return true;
+                  return true;
 
 
         } catch (SocketTimeoutException e){
@@ -81,7 +81,7 @@ public class PROXYIpAddress {
             return false;
     }
 
-    public void checkForUsability() throws SQLException {
+    public void checkForAccesability() throws SQLException {
 
         String UPDATE_COLUMN_2 = "UPDATE proxylist SET usability = ? WHERE ipaddress = ?";
         JDBCConnection jdbcConnection = new JDBCConnection();
@@ -98,14 +98,21 @@ public class PROXYIpAddress {
 
        while (resultSet.next()) {
 
-            SocketAddress socketAddress = new InetSocketAddress(resultSet.getString(1), resultSet.getInt(4));
+            SocketAddress socketAddress = new InetSocketAddress(resultSet.getString(1), resultSet.getInt(3));
             tempIPAddress = resultSet.getString(1);
             preparedStatement.setBoolean(1,proxyIpAddress.checkIpEfficiency(socketAddress));
-            System.out.println(resultSet.getString(1));
+            System.out.println(resultSet.getString(1) + ":" + resultSet.getInt(3));
             preparedStatement.setString(2,tempIPAddress);
             preparedStatement.executeUpdate();
 
         }
+
+    }
+
+    public static void main(String[] args) throws SQLException {
+        PROXYIpAddress proxyIpAddress = new PROXYIpAddress();
+
+        proxyIpAddress.checkForAccesability();
 
     }
 }

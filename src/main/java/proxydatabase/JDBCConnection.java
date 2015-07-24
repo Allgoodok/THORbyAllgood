@@ -7,7 +7,7 @@ import java.sql.*;
 public class JDBCConnection {
     private static final String url = "jdbc:postgresql://localhost:5432/ProxyList";
     public static final  String username = "postgres";
-    public static final  String password = "Terminator133";
+    public static final  String password = "1234";
     protected String driverJAR = "org.postgresql.Driver";
     public Connection connection = null;
 

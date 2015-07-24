@@ -1,0 +1,193 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head><title>Z-Mail - почтовый сервис компании "Зенон Н.С.П."</title>
+<style type="text/css" media="all">
+	@import url("/all.css");
+</style>
+<link rel="shortcut icon" href="/favicon.ico" />
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+
+ 
+
+</head><body>
+<div align="center"><div id="work_panel">
+
+<div id="navigation_panel">
+
+<div id="header_mainmenu">
+	<a href="/"><img style="border: 0px solid black;" alt="." src="/img/header.png" /></a>
+
+<ul class="topmenu_ul">
+
+	<li class="topmenu_item"><a target="_blank" href="http://www.host.ru">Хостинг</a></li>
+	
+	<li class="topmenu_item"><a href="/contact/">Контактная информация</a></li> 
+	
+</ul>
+
+</div>
+<div class="clear"> <hr /> </div>
+</div> 
+
+
+<div id="main_panel">
+
+<div class="section">
+
+<h2>Z-Mail - почтовый сервис компании "Зенон Н.С.П."</h2>
+
+<p>Почтовая система Z-Mail - это бесплатная электронная почта. Вы можете
+зарегистрировать
+для себя адрес электронной почты в домене @zmail.ru.
+Вы сможете получать и отправлять электронную почт
+20:19:06 
+у через веб-браузер,
+с любого компьютера, подключенного к сети Интернет.</p>
+
+<p>В рамках бесплатных почтовых сервисов предоставляется:</p>
+
+<ul>
+<li>почтовый адрес в домене zmail.ru;
+<li>6 Мб дискового пространства для хранения почты;
+<li>возможность забирать почту с других почтовых серверов на Ваш почтовый ящик в системе Z-Mail;
+<li>настраиваемый русскоязычный интерфейс для работы с почтой;
+<li>"автоответчик", "декодер"
+</ul>
+
+</div>
+</div>
+
+
+
+
+<div id="login_panel">
+	
+	<table>
+	<tr><td class="login_uc" colspan="2"><img alt="." src="/img/login_ul.jpg" align="left" /> <img alt="." align="right" src="/img/login_ur.jpg" /></td></tr>
+	<tr><td class="login_central" colspan="2">	
+
+	<script language="JavaScript" type="text/javascript"><!--
+	// setTimeout ("rel()", 3000);
+	function rel() {if (self.parent.frames.length!=0) {self.parent.location=document.location;}}
+	// -->
+	</script>
+
+	<h2>Почта ZMail</h2>
+
+	</td></tr>
+
+	<tr><td class="login_left"><p>E-mail:</p></td>
+
+	<td class="login_right">
+	<form method="post" action="https://mail.zmail.ru/" enctype="application/x-www-form-urlencoded" name="enter" onsubmit="return p1()"><p><input name="Username" type="text" class="text" size="20" maxlength="255" /></p>
+	<script language="JavaScript" type="text/javascript"><!--
+	document.write('<\/form><form name="enter2" method=post action="https://mail.zmail.ru/" enctype="application/x-www-form-urlencoded" onsubmit="return p2()"><input name="Username" type="hidden" />');
+ 	//--></script>	
+	</td></tr>
+
+	<tr><td class="login_left"><p>Пароль: </p></td><td class="login_right"><p><input name="Password" class="text" type="password" size="20" maxlength="99" /></p></td></tr>
+	
+	<tr><td class="login_central" colspan="2">
+	
+
+
+	<input name="login" type="hidden" value="Enter" /><input type="submit" class="button" value="Войти" /><br />
+	<font size="-2"><a href="/mailserver/settings.html" target="_blank">Установки</a> | <a href="/mailserver/faq.html" target="_blank">Помощь</a> | <a href="https://stat.zenon.net/c/cgpaccount" target="_blank">Регистрация</a></font>
+	</form></td></tr>
+	<tr><td class="login_uc" colspan="2"><img src="/img/login_dl.jpg" alt="." align="left" /> <img align="right" src="/img/login_dr.jpg" alt="." /></td></tr>
+	</table>
+	
+	<div class="clear"> <hr /> </div>
+
+
+
+
+<script language="JavaScript" type="text/javascript"><!--
+ var coding = 'ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMabcdefghijklmnopqrstuvwxyzabcdefghijklm';
+ var today = new Date();
+ var expires = new Date(today.getTime() + (56 * 86400000));
+ var pass=0;
+
+ function fn(input) {
+     if (!input) return '';
+     for (var output = '',i=0;i<input.length;i++) {
+         character = input.charAt(i);
+         position = coding.indexOf(character);
+         if (position > -1)
+             character = coding.charAt(position + 13);
+         output += character;
+     }
+     return output;
+ }
+
+ function gc(name) {
+     var start = document.cookie.indexOf(name+"=");
+     var len = start+name.length+1;
+     if ((!start) && (name != document.cookie.substring(0,name.length))) return null;
+     if (start == -1) return null;
+     var end = document.cookie.indexOf(";",len);
+     if (end == -1) end = document.cookie.length;
+     return unescape(document.cookie.substring(len,end));
+ }
+  
+ function sc(name,value,expires,path,domain,secure) {
+     document.cookie = name + "=" +escape(value) +
+         ( (expires) ? ";expires=" + expires.toGMTString() : "") +
+         ( (path) ? ";path=" + path : "") + 
+         ( (domain) ? ";domain=" + domain : "") +
+         ( (secure) ? ";secure" : "");
+ }
+
+ function p1() {
+     if (pass) {return true;}
+     document.enter2.Password.focus();
+     return false;
+ }
+
+ function p2() {
+     document.enter2.Username.value = document.enter.Username.value;
+     sc("userid",fn(document.enter.Username.value),expires);
+     pass=1; 
+     return true;
+ }
+
+     document.enter.Username.value = fn(gc("userid"));
+     document.enter2.Username.value = fn(gc("userid"));
+     if (document.enter2.Username.value.length>0) {document.enter2.Password.focus();}
+     else {document.enter.Username.focus();}
+
+ //--></script>
+
+
+</div>
+
+<div class="clear"> <hr /> </div>
+
+<div id="footer"> <div class="clear"> <hr /> </div>
+	<ul class="footer_ul">
+	<li class="footer_item">
+		<div>Техподдержка: (круглосуточно)</div>
+		<div>(495) 232-3736, <a href="mailto:support@zenon.net">support@zenon.net</a></div> 
+	</li>
+
+	<li class="footer_item">
+		<div>Отдел продаж: (09:30 - 18:00)</div>
+		<div>(495) 956-1380, <a href="mailto:hosting@zenon.net">hosting@zenon.net</a></div>
+	</li>
+
+	<li class="footer_item_right">
+		<div>&copy; 1996-2010 &laquo;Zenon N.S.P.&raquo; <a href="http://www.zenon.net">www.zenon.net</a></div>
+		<div>125040, город Москва, 1-ая улица Ямского поля, д. 19</div>
+	</li>
+	
+	</ul>
+</div>
+
+</div></div>
+
+</body></html>
+
+
+
